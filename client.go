@@ -2,6 +2,7 @@ package vk
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"reflect"
 
@@ -98,6 +99,6 @@ func NewClientWithOptions(options ...Option) (*Client, error) {
 	if client.HTTPClient == nil {
 		client.HTTPClient = http.DefaultClient
 	}
-
+	fmt.Println("test")
 	return client, nil
 }
